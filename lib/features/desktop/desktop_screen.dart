@@ -1,3 +1,4 @@
+import 'dart:ui';
 import 'package:flutter/material.dart';
 import '../../data/models/desktop_layout_model.dart';
 import '../../data/models/app_icon_model.dart';
@@ -7,6 +8,7 @@ import '../../widgets/liquid_glass_panel.dart';
 import '../../widgets/glass_icon.dart';
 import '../../widgets/glass_context_menu.dart';
 import '../../core/platform/launcher_service.dart';
+import '../../core/utils/squircle_path.dart';
 
 class DesktopScreen extends StatefulWidget {
   final DesktopLayoutModel layout;
@@ -336,7 +338,7 @@ class _QuickTerminalWidget extends StatelessWidget {
           ),
         ),
         child: const Text(
-          '~ $ _',
+          '~ \$ _',
           style: TextStyle(
             color: Color(0xFF39FF14),
             fontSize: 12.0,
@@ -571,6 +573,3 @@ class _DesktopFolder extends StatelessWidget {
     );
   }
 }
-
-// Import SquircleClipper from core utils for folder bottom sheet
-import '../../core/utils/squircle_path.dart';

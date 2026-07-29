@@ -4,13 +4,13 @@ import '../../core/theme/glass_tokens.dart';
 import '../../core/utils/squircle_path.dart';
 import '../../core/platform/launcher_service.dart';
 
-class MenuBar extends StatelessWidget {
+class LiquidMenuBar extends StatelessWidget {
   final String activeAppName;
   final VoidCallback onMenuTap;
   final VoidCallback onControlCenterTap;
   final VoidCallback onNotificationCenterTap;
 
-  const MenuBar({
+  const LiquidMenuBar({
     super.key,
     this.activeAppName = 'LiquidOS',
     required this.onMenuTap,

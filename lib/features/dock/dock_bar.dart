@@ -72,7 +72,6 @@ class _DockBarState extends State<DockBar> with SingleTickerProviderStateMixin {
   Widget _buildDock() {
     return Center(
       child: LiquidGlassPanel(
-        width: null,
         height: 72.0,
         borderRadius: 32.0,
         blurSigma: 30.0,
@@ -153,7 +152,7 @@ class _DockIconState extends State<_DockIcon> {
     return GestureDetector(
       onTap: widget.onTap,
       onLongPressStart: widget.onLongPressStart,
-      onHorizontalDragUpdate: magnification
+      onHorizontalDragUpdate: widget.magnification
           ? (details) => _handleMagnification(details)
           : null,
       onHorizontalDragEnd: (_) => setState(() => _scale = 1.0),

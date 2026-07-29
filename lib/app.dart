@@ -1,7 +1,9 @@
+import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'core/theme/liquid_theme.dart';
 import 'core/theme/glass_tokens.dart';
+import 'core/utils/squircle_path.dart';
 import 'data/models/settings_model.dart';
 import 'data/models/desktop_layout_model.dart';
 import 'data/repositories/settings_repository.dart';
@@ -100,14 +102,12 @@ class _LiquidOSHomeState extends State<_LiquidOSHome> {
       backgroundColor: Colors.transparent,
       body: Stack(
         children: [
-          // Layer 0: Dynamic wallpaper
           _buildWallpaper(),
-          // Layer 1: Menu bar
           Positioned(
             top: 0,
             left: 0,
             right: 0,
-            child: MenuBar(
+            child: LiquidMenuBar(
               activeAppName: 'LiquidOS',
               onMenuTap: () => setState(() => _showSystemMenu = !_showSystemMenu),
               onControlCenterTap: () =>
@@ -116,7 +116,6 @@ class _LiquidOSHomeState extends State<_LiquidOSHome> {
                   setState(() => _showNotificationCenter = true),
             ),
           ),
-          // Layer 2: Desktop with spaces
           Positioned.fill(
             child: DesktopScreen(
               layout: _layout,
@@ -125,7 +124,6 @@ class _LiquidOSHomeState extends State<_LiquidOSHome> {
               onSpaceChanged: (space) => setState(() => _currentSpace = space),
             ),
           ),
-          // Layer 3: Dock
           Positioned(
             bottom: 16.0,
             left: 0,
@@ -136,41 +134,34 @@ class _LiquidOSHomeState extends State<_LiquidOSHome> {
               magnification: _settings.dockMagnification,
             ),
           ),
-          // Layer 4: Space indicators
           Positioned(
             bottom: 100.0,
             left: 0,
             right: 0,
             child: _buildSpaceIndicators(),
           ),
-          // Layer 5: System menu dropdown
           if (_showSystemMenu)
             Positioned(
               top: 28.0,
               left: 12.0,
               child: _buildSystemMenu(),
             ),
-          // Layer 6: Control Center overlay
           if (_showControlCenter)
             ControlCenter(
               onDismiss: () => setState(() => _showControlCenter = false),
             ),
-          // Layer 7: Notification Center overlay
           if (_showNotificationCenter)
             NotificationCenter(
               onDismiss: () => setState(() => _showNotificationCenter = false),
             ),
-          // Layer 8: Spotlight search overlay
           if (_showSpotlight)
             SpotlightSearch(
               onDismiss: () => setState(() => _showSpotlight = false),
             ),
-          // Layer 9: Mission Control overlay
           if (_showMissionControl)
             MissionControl(
               onDismiss: () => setState(() => _showMissionControl = false),
             ),
-          // Layer 10: Settings overlay
           if (_showSettings)
             Positioned.fill(
               child: GestureDetector(
@@ -179,7 +170,7 @@ class _LiquidOSHomeState extends State<_LiquidOSHome> {
                   color: Colors.black.withOpacity(0.40),
                   child: Center(
                     child: GestureDetector(
-                      onTap: () {}, // Prevent dismiss when tapping settings
+                      onTap: () {},
                       child: SettingsScreen(
                         settings: _settings,
                         onSettingsChanged: (s) {
@@ -200,15 +191,15 @@ class _LiquidOSHomeState extends State<_LiquidOSHome> {
   Widget _buildWallpaper() {
     return Positioned.fill(
       child: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: RadialGradient(
             center: Alignment(0.3, -0.4),
             radius: 1.8,
             colors: [
-              const Color(0xFF1a1a2e),
-              const Color(0xFF16213e),
-              const Color(0xFF0f3460),
-              const Color(0xFF0B0B0F),
+              Color(0xFF1a1a2e),
+              Color(0xFF16213e),
+              Color(0xFF0f3460),
+              Color(0xFF0B0B0F),
             ],
           ),
         ),
@@ -337,7 +328,3 @@ class _LiquidOSHomeState extends State<_LiquidOSHome> {
     );
   }
 }
-
-// Import needed for BackdropFilter, ImageFilter
-import 'dart:ui';
-import 'core/utils/squircle_path.dart';
