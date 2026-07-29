@@ -8,6 +8,10 @@
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />
         </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="package" />
+        </intent>
     </queries>
 
     <!-- Permissions -->
@@ -29,12 +33,6 @@
         android:theme="@style/LaunchTheme"
         android:hardwareAccelerated="true"
         android:largeHeap="true">
-
-        <!-- Enable full backup for layout data -->
-        <data-extraction-rules>
-            <cloud-backup />
-            <device-transfer />
-        </data-extraction-rules>
 
         <activity
             android:name=".MainActivity"
@@ -62,19 +60,10 @@
 
         </activity>
 
-        <!-- Don't emit the Flutter splash screen meta-data (uses LaunchTheme) -->
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
 
     </application>
-
-    <!-- Required for API 33+ to allow package visibility -->
-    <queries>
-        <intent>
-            <action android:name="android.intent.action.VIEW" />
-            <data android:scheme="package" />
-        </intent>
-    </queries>
 
 </manifest>
