@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Calendar icon -->
+  <rect x="18" y="25" width="64" height="60" rx="8" opacity="0.3"/>
+  <line x1="18" y1="40" x2="82" y2="40"/>
+  <line x1="35" y1="18" x2="35" y2="32"/>
+  <line x1="65" y1="18" x2="65" y2="32"/>
+  <text x="50" y="65" text-anchor="middle" font-size="22" font-weight="600" fill="currentColor" stroke="none">29</text>
+</svg>

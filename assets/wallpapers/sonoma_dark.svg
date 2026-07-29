@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <radialGradient id="g1" cx="30%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="50%" stop-color="#16213e"/>
+      <stop offset="100%" stop-color="#0f3460"/>
+    </radialGradient>
+    <radialGradient id="g2" cx="70%" cy="60%" r="60%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0B0B0F" stop-opacity="0.8"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#6366F1" stop-opacity="0.03"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#g1)"/>
+  <rect width="1920" height="1080" fill="url(#g2)"/>
+  <rect width="1920" height="1080" fill="url(#accent)"/>
+  <!-- Subtle particle orbs -->
+  <circle cx="300" cy="200" r="150" fill="#00E5FF" opacity="0.03"/>
+  <circle cx="1600" cy="800" r="200" fill="#6366F1" opacity="0.03"/>
+  <circle cx="960" cy="540" r="300" fill="#10B981" opacity="0.02"/>
+</svg>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Search icon -->
+  <circle cx="42" cy="42" r="25" opacity="0.3"/>
+  <line x1="60" y1="60" x2="82" y2="82"/>
+</svg>

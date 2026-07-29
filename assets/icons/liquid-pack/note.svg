@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Note/Sticky icon -->
+  <path d="M20,15 L80,15 L80,85 L20,85 Z" opacity="0.3"/>
+  <line x1="30" y1="35" x2="70" y2="35"/>
+  <line x1="30" y1="50" x2="70" y2="50"/>
+  <line x1="30" y1="65" x2="55" y2="65"/>
+</svg>
