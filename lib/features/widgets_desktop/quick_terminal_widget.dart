@@ -57,7 +57,7 @@ class QuickTerminalWidget extends StatelessWidget {
                 ),
               ),
               child: const Text(
-                '~ $ _\n$ neofetch\n> LiquidOS v1.0.0\n> Flutter 3.x | Android',
+                '~ \$ _\n\$ neofetch\n> LiquidOS v1.0.0\n> Flutter 3.x | Android',
                 style: TextStyle(
                   color: Color(0xFF39FF14),
                   fontSize: 10.0,
