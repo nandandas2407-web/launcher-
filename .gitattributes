@@ -1,0 +1,16 @@
+# Force binary handling for image assets so git/CI never mangles them
+# (e.g. via autocrlf line-ending translation on checkout)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.icns binary
+
+# Other binary formats used in Android/Flutter projects
+*.jar binary
+*.keystore binary
+*.jks binary
+*.so binary
+*.zip binary

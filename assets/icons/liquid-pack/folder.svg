@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Folder icon -->
+  <path d="M15,30 L15,75 C15,78 17,80 20,80 L80,80 C83,80 85,78 85,75 L85,35 C85,32 83,30 80,30 L45,30 L40,22 L20,22 C17,22 15,24 15,27 Z" opacity="0.3"/>
+  <path d="M15,35 L85,35"/>
+</svg>
